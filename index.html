@@ -242,7 +242,7 @@
         if (!response.ok) {
           //console.error('API Error:', response.status, data);
           const errorMessage = data.error.message || 'Unknown error from server';
-          loadingMessageDiv.textContent = `Error: ${errorMessage}`;
+          loadingMessageDiv.textContent = `Error Status Code : ${response.status},  ${errorMessage}`;
           loadingMessageDiv.classList.remove('loading');
           return;
         }
