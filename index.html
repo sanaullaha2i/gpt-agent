@@ -229,7 +229,7 @@
       loadingMessageDiv.classList.add('loading');
 
       try {
-        const response = await fetch('http://localhost:3000/chat', {
+        const response = await fetch('http://127.0.0.1:3000/chat', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -238,9 +238,9 @@
         });
 
         const data = await response.json();
-        console.log('response : ', response);
+        //console.log('response : ', response);
         if (!response.ok) {
-          console.error('API Error:', response.status, data);
+          //console.error('API Error:', response.status, data);
           const errorMessage = data.error.message || 'Unknown error from server';
           loadingMessageDiv.textContent = `Error: ${errorMessage}`;
           loadingMessageDiv.classList.remove('loading');
