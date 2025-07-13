@@ -4,7 +4,7 @@ const cors = require('cors');
 require('dotenv').config();
 //console.log(process.env.OPENAI_API_KEY);
 const app = express();
-const PORT = 3003;
+const PORT = process.env.PORT;
 
 app.use(cors());
 app.use(express.json());
